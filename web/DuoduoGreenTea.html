@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多多綠</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }        
+        body {            
+            margin: 0px;
+        }
+        .slideshow-container
+        {
+          max-width: 800px;
+          position: relative;
+          margin: 0px auto;
+        }
+        /*按鍵設計*/
+        .prev, .next
+        {
+          position: absolute;
+          top: 50%;
+          padding: 20px;
+          width: auto;
+          color: white;
+          font-weight: bold;
+          font-size: 30px;
+          border-radius: 3px;
+          transition: 0.6s ease;
+        }
+        .next{
+          right: 0px;
+        }
+        .prev:hover, .next:hover{
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        /*照片動畫*/
+        .mySlides
+        {
+          animation: fade;
+          animation-duration: 1.5s;
+        }
+        @keyframes fade
+        {
+          from{opacity: 0.4;}
+          to{opacity: 1;}
+        }
+        /*圓點*/
+        .dot
+        {
+          position: relative;
+          height: 10px;
+          width: 10px;
+          margin: 0px 2px;
+          border-radius: 50%;
+          background-color: #bbb;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover{
+          background-color: #717171;
+        }
+        .book{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 300px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding:30px;
+            border-radius: 10px;
+        }
+        .bookimg img{
+            width: 300px;
+            height: auto;
+            margin-right: 40px;
+        }
+        .imformation{
+            flex-direction: column;
+            padding-left: 20px;
+            width: 60%;
+            border-radius: 10px;
+        }
+        .booktable th, .booktable td {
+            padding: 5px;
+            text-align: left;
+            white-space: nowrap;
+            padding-bottom: 8px;
+        }
+        .quantity-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -5px;
+            margin-left: -90px;
+        }
+        .buttons{
+            margin: 18px 28px;
+        }
+ 
+.buttons button{
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14pt;
+}
+
+.buttons button a{
+    text-decoration: none;
+    color: white;
+}
+.quantity-btn {
+    cursor: pointer;
+    font-size: 20pt;
+    height: 20px;
+    padding-bottom: 15px;
+   }
+
+#quantity {
+    width: 100px;
+    text-align: center;
+    margin: 0 2px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 13pt;
+}
+.footer {
+            text-align: center;
+            background-color: #d6ccc2;
+            height: 100px;
+            margin-top: 3%;
+        }
+    </style>
+</head>
+<body>
+<div class="switchdrink">
+    <div class="slideshow-container">
+        <div class="mySlides">
+          <a href="DuoduoGreenTea.html"><img src="5026f5dd138823f91578d259e45d6706.jpg" style="width: 800px;height: 500px;"></a>         
+        </div>
+        <div class="mySlides"> 
+          <a href="PearlMilkTea.html"><img src="54590_00.jpg" style="width: 800px;height: 500px;"></a>         
+        </div>
+        <div class="mySlides">
+          <a href="BlackTea.html"><img src="drink-4475363_640.jpg" style="width: 800px;height: 500px;"> </a>         
+        </div>
+        <div class="mySlides">
+          <a href="Latte.html"><img src="f286a8b34db1c46f7e4964327a5ec866573c55e5.jpg" style="width: 800px;height: 500px;"></a>          
+        </div>
+        <div class="mySlides">
+          <a href="GreenTea.html"><img src="Jasmine-Green-Tea-2.jpg" style="width: 800px;height: 500px;"> </a>          
+        </div>
+        <div class="mySlides">
+          <a href="Redbull.html"><img src="red-bull-3301415_640.jpg" style="width: 800px;height: 500px;"></a>        
+          </div>
+        <!--左右按鈕-->
+         <a class="prev" onclick="plusSlides(-1)">〈</a>
+         <a class="next" onclick="plusSlides(1)">〉</a>
+    </div>      
+    <!--顯示圓點-->
+    <div style="text-align:center ;">
+      <span class="dot" onclick="currentSlides(0)"></span>
+      <span class="dot" onclick="currentSlides(1)"></span>
+      <span class="dot" onclick="currentSlides(2)"></span>
+      <span class="dot" onclick="currentSlides(3)"></span>
+      <span class="dot" onclick="currentSlides(4)"></span>
+      <span class="dot" onclick="currentSlides(5)"></span>
+    </div>
+</div>
+<div class="book">
+    <div class="bookimg">
+        <img  src ="5026f5dd138823f91578d259e45d6706.jpg">
+    </div>
+    <div class="imformation">
+        <table class="booktable">
+            <tr>
+                <th>溫馨提示</th>
+            </tr>
+            <tr>
+                <td>產品圖片僅供參考，實際產品以現場販售為準。</td>
+            </tr>
+            <tr>
+                <td>珍惜資源，歡迎消費者自備飲料杯，飲品折價5元。</td>
+            </tr>
+            <tr>
+                <td>響應環保，本店配合回收廢一次用飲料杯，請交門市服務人員回收。</td>
+            </tr>
+            <tr>
+                <td>單價：50元</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="quantity-container">
+                        <div class="quantity-btn" onclick="decreaseQuantity()">&lt;</div>
+                        <div class="quantity-number"><input type="text" id="quantity" value="1" readonly></div>
+                        <div class="quantity-btn" onclick="increaseQuantity()">&gt;</div>
+                      </div>
+                </td>
+            </tr>
+        </table>
+        <div class="buttons">
+            <button onclick="showCar('已加入購物車')">加入購物車</button>
+            <a href="index.html"><button>回首頁</button></a>
+        </div>
+    </div>
+</div>
+<script>
+  function showCar()
+  {
+    alert('已加入購物車');
+  }
+  function decreaseQuantity() {
+    var quantityInput = document.getElementById('quantity');
+    var currentQuantity = parseInt(quantityInput.value, 10);
+    if (currentQuantity > 1) {
+      quantityInput.value = currentQuantity - 1;
+    }
+  }
+  function increaseQuantity() {
+    var quantityInput = document.getElementById('quantity');
+    var currentQuantity = parseInt(quantityInput.value, 10);
+    quantityInput.value = currentQuantity + 1;
+  }
+  var slideIndex=0;
+  var timer=null;
+  autoPlay(true);
+  function plusSlides(n){
+    showSlides(slideIndex+=n);
+  }
+  function currentSlides(n){
+    showSlides(slideIndex=n);
+  }
+  function showSlides(n)
+  {
+    clearTimeout(timer);
+    var slides=document.getElementsByClassName("mySlides");
+    var dots=document.getElementsByClassName("dot");
+    if(n>=slides.length){
+      slideIndex=0;
+    }
+    if(n<0){
+      slideIndex=slides.length-1;
+    }
+
+    for(var i=0;i<slides.length;i++){
+      slides[i].style.display="none";
+    }
+    slides[slideIndex].style.display="block";
+    for(var i=0;i<dots.length;i++){
+      dots[i].className=dots[i].className.replace(" active", "")
+    }
+    dots[slideIndex].className+=" active";
+  }
+  function autoPlay(isFirst)
+  {
+    var slides=document.getElementsByClassName("mySlides");
+    if(isFirst){
+      slideIndex=0;
+    }else{
+      slideIndex++;
+    }
+
+    if(slideIndex>slides.length){
+      slideIndex=0;
+    }
+    showSlides(slideIndex);
+    timer=setTimeout(autoPlay,2000);
+  }
+</script>
+</body>
+</html>
