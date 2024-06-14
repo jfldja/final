@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header .lang,
+.user {
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+section.content {
+    flex: 1;
+    padding: 20px;
+}
+
+section.content h1,
+section.content h2 {
+    color: #c30;
+}
+
+section.content .info {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+section.content .products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.content .product {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+section.content .product img {
+    width: 100%;
+    height: auto;
+}
+
+section.content .product p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background-color: #d6ccc2;
+    height: 100px;
+    margin-top: 3%;
+}
